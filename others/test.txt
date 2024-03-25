@@ -1,0 +1,50 @@
+CoreCell reset through GPIO7...
+Waiting for packets...
+bind failed
+Create LoraGatewayThread successfully
+LoraGatewayRun start
+||Index:99
+||Message:cccccccccccccccccccc
+||Type:O
+||Index:97
+||Message:aaaaaaaaaaaaaaaaaaaa
+||Type:O
+Create UnpackingThread successfully
+--在35054时收到2个包----
+共收到2个包,最后一个包的编号为97
+Packet destory once
+UnpackingThread destory once
+||Index:2
+||Message:aaaaaaaaaaaaaaaaaaaa
+||Type:O
+||Index:2
+||Message:cccccccccccccccccccc
+||Type:O
+||Index:3
+||Message:aaaaaaaaaaaaaaaaaaaa
+||Type:O
+||Index:3
+||Message:cccccccccccccccccccc
+||Type:O
+Create UnpackingThread successfully
+--在35459时收到4个包----
+共收到6个包,最后一个包的编号为3
+Packet destory once
+UnpackingThread destory once
+||Index:4
+||Message:aaaaaaaaaaaaaaaaaaaa
+||Type:O
+||Index:4
+||Message:cccccccccccccccccccc
+||Type:O
+||Index:5
+||Message:cccccccccccccccccccc
+||Type:O
+||Index:5
+||Message:aaaaaaaaaaaaaaaaaaaa
+||Type:O
+Create UnpackingThread successfully
+--在35866时收到4个包----
+共收到10个包,最后一个包的编号为5
+Packet destory once
+UnpackingThread destory once

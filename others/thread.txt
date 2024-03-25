@@ -1,0 +1,43 @@
+
+// ******************** 线程3部分 ********************
+typedef struct Thread3 Thread3;
+struct Thread3 {
+  pthread_t* pId;
+  void* (*vpStartRoutine)(void*);
+  void* vpArg;
+  void (*vCreate)(Thread3*);
+};
+// 线程3构造函数
+Thread3* spNewThread3();
+// 线程3初始化函数
+void vCreateThread3(Thread3* this);
+// 线程3销毁函数
+void vDestoryThread3(Thread3* this);
+
+// ******************** 线程3部分 ********************
+Thread3* spNewThread3() {
+  Thread3* this = (Thread3*)malloc(sizeof(Thread3));
+  this->pId = (pthread_t*)malloc(sizeof(pthread_t));
+  this->vpStartRoutine = (void*)fun;
+  this->vpArg = NULL;
+  this->vCreate = vCreateThread3;
+  return this;
+}
+void vCreateThread3(Thread3* this) {
+  if (0 != pthread_create(this->pId, NULL, this->vpStartRoutine, this->vpArg)) {
+    printf("Create Thread3 error!\n");
+  } else {
+#ifdef SHOW_SUCCESS
+    printf("Create Thread3 successfully\n");
+#endif
+  }
+  return;
+};
+void vDestoryThread3(Thread3* this) {
+  pthread_join(*(this->pId), NULL);
+#ifdef SHOW_DESTORY
+  printf("Destory\n");
+#endif
+  free(this->pId);
+  free(this);
+}

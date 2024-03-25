@@ -1,0 +1,18 @@
+{
+  "configurations": [
+      {
+          "name": "Linux",
+          "includePath": [
+              "${workspaceFolder}/**",
+              "/home/jqf/Projects/Object_Oriented_231225/libloragw/inc/**",
+              "/home/jqf/Projects/Object_Oriented_231225/gateway/inc/**"
+          ],
+          "defines": [
+              "_DEBUG",
+              "UNICODE",
+              "_UNICODE"
+          ]
+      }
+  ],
+  "version": 4
+}
